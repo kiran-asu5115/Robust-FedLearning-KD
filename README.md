@@ -1,1 +1,1 @@
-# cse598-ml-privacy-course-project
+# CSE598-ML-Privacy-Course-Project
