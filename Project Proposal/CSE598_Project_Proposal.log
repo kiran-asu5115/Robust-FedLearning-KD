@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.7) (preloaded format=pdflatex 2022.9.29)  14 OCT 2022 08:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.7) (preloaded format=pdflatex 2022.9.29)  14 OCT 2022 09:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -348,11 +348,9 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[3 <./Screenshots/fig1.png (PNG copy)>] (CSE598_Project_Proposal.aux)
+[3
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+ <./Screenshots/fig1.png (PNG copy)>] (CSE598_Project_Proposal.aux) ) 
 Here is how much of TeX's memory you used:
  4296 strings out of 478338
  67051 string characters out of 2850293
@@ -361,16 +359,17 @@ Here is how much of TeX's memory you used:
  514359 words of font info for 113 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,11n,62p,600b,302s stack positions out of 10000i,1000n,20000p,200000b,80000s
-{D:/Tools/MikTex/fonts/enc/dvips/base/8r.enc}<D:/Tools/MikTex/fonts/type1/pub
-lic/amsfonts/cm/cmmi10.pfb><D:/Tools/MikTex/fonts/type1/public/amsfonts/cm/cmr1
-0.pfb><D:/Tools/MikTex/fonts/type1/public/amsfonts/cm/cmr6.pfb><D:/Tools/MikTex
-/fonts/type1/public/amsfonts/cm/cmr7.pfb><D:/Tools/MikTex/fonts/type1/public/am
-sfonts/cm/cmsy10.pfb><D:/Tools/MikTex/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-<D:/Tools/MikTex/fonts/type1/urw/courier/ucrr8a.pfb><D:/Tools/MikTex/fonts/type
-1/urw/times/utmb8a.pfb><D:/Tools/MikTex/fonts/type1/urw/times/utmbi8a.pfb><D:/T
-ools/MikTex/fonts/type1/urw/times/utmr8a.pfb><D:/Tools/MikTex/fonts/type1/urw/t
-imes/utmri8a.pfb>
-Output written on CSE598_Project_Proposal.pdf (3 pages, 142935 bytes).
+{D:/Tools/
+MikTex/fonts/enc/dvips/base/8r.enc}<D:/Tools/MikTex/fonts/type1/public/amsfonts
+/cm/cmmi10.pfb><D:/Tools/MikTex/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/To
+ols/MikTex/fonts/type1/public/amsfonts/cm/cmr6.pfb><D:/Tools/MikTex/fonts/type1
+/public/amsfonts/cm/cmr7.pfb><D:/Tools/MikTex/fonts/type1/public/amsfonts/cm/cm
+sy10.pfb><D:/Tools/MikTex/fonts/type1/public/amsfonts/cm/cmsy7.pfb><D:/Tools/Mi
+kTex/fonts/type1/urw/courier/ucrr8a.pfb><D:/Tools/MikTex/fonts/type1/urw/times/
+utmb8a.pfb><D:/Tools/MikTex/fonts/type1/urw/times/utmbi8a.pfb><D:/Tools/MikTex/
+fonts/type1/urw/times/utmr8a.pfb><D:/Tools/MikTex/fonts/type1/urw/times/utmri8a
+.pfb>
+Output written on CSE598_Project_Proposal.pdf (3 pages, 141420 bytes).
 PDF statistics:
  69 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
