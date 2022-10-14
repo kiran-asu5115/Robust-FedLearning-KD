@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.7) (preloaded format=pdflatex 2022.9.29)  14 OCT 2022 13:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.7) (preloaded format=pdflatex 2022.9.29)  14 OCT 2022 16:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -262,7 +262,11 @@ File: l3backend-pdftex.def 2022-07-01 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count282
 \l__pdf_internal_box=\box55
 )
-(CSE598_Project_Proposal.aux)
+(CSE598_Project_Proposal.aux
+
+LaTeX Warning: Label `fig' multiply defined.
+
+)
 \openout1 = `CSE598_Project_Proposal.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
@@ -321,18 +325,13 @@ Overfull \hbox (3.2028pt too wide) in paragraph at lines 38--39
 
 Underfull \vbox (badness 2707) has occurred while \output is active []
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 64.
-
-
-(D:\Tools\MikTex\tex/latex/amsfonts\umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 64.
-
-
-(D:\Tools\MikTex\tex/latex/amsfonts\umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1{C:/Users/Kiran S/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}
+<./Screenshots/Federated_Learning.png, id=2, 314.3745pt x 251.13824pt>
+File: ./Screenshots/Federated_Learning.png Graphic file (type png)
+<use ./Screenshots/Federated_Learning.png>
+Package pdftex.def Info: ./Screenshots/Federated_Learning.png  used on input li
+ne 56.
+(pdftex.def)             Requested size: 235.78029pt x 188.35323pt.
+ [1{C:/Users/Kiran S/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}
 
 
  <./Screenshots/Knowledge_Distillation.png>]
@@ -347,25 +346,24 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[2
+[2 <./Screenshots/Federated_Learning.png>] (CSE598_Project_Proposal.aux)
 
-] (CSE598_Project_Proposal.aux) ) 
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 4213 strings out of 478338
- 66077 string characters out of 2850293
- 378934 words of memory out of 3000000
- 22607 multiletter control sequences out of 15000+600000
- 504095 words of font info for 93 fonts, out of 8000000 for 9000
+ 4173 strings out of 478338
+ 65789 string characters out of 2850293
+ 377968 words of memory out of 3000000
+ 22589 multiletter control sequences out of 15000+600000
+ 496423 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,11n,62p,993b,304s stack positions out of 10000i,1000n,20000p,200000b,80000s
-{D:/Tools/MikTex/fonts/enc/dvips/base/8r.enc}<
-D:/Tools/MikTex/fonts/type1/public/amsfonts/cm/cmr6.pfb><D:/Tools/MikTex/fonts/
-type1/urw/times/utmb8a.pfb><D:/Tools/MikTex/fonts/type1/urw/times/utmbi8a.pfb><
-D:/Tools/MikTex/fonts/type1/urw/times/utmr8a.pfb><D:/Tools/MikTex/fonts/type1/u
-rw/times/utmri8a.pfb>
-Output written on CSE598_Project_Proposal.pdf (2 pages, 134556 bytes).
+ 55i,8n,62p,993b,259s stack positions out of 10000i,1000n,20000p,200000b,80000s
+{D:/Tools/MikTex/fonts/enc/dvips/base/8r.enc}<D:/Tools/MikTex/fonts/type1/urw
+/times/utmr8a.pfb><D:/Tools/MikTex/fonts/type1/urw/times/utmri8a.pfb>
+Output written on CSE598_Project_Proposal.pdf (2 pages, 131484 bytes).
 PDF statistics:
- 36 PDF objects out of 1000 (max. 8388607)
+ 24 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
