@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.7) (preloaded format=pdflatex 2022.9.29)  14 OCT 2022 16:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.7) (preloaded format=pdflatex 2022.9.29)  14 OCT 2022 17:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -266,6 +266,9 @@ File: l3backend-pdftex.def 2022-07-01 L3 backend support: PDF output (pdfTeX)
 
 LaTeX Warning: Label `fig' multiply defined.
 
+
+LaTeX Warning: Label `fig' multiply defined.
+
 )
 \openout1 = `CSE598_Project_Proposal.aux'.
 
@@ -325,16 +328,34 @@ Overfull \hbox (3.2028pt too wide) in paragraph at lines 38--39
 
 Underfull \vbox (badness 2707) has occurred while \output is active []
 
-<./Screenshots/Federated_Learning.png, id=2, 314.3745pt x 251.13824pt>
+<./Screenshots/Status_of_Federated_Learning.jpeg, id=2, 1102.1175pt x 676.5275p
+t>
+File: ./Screenshots/Status_of_Federated_Learning.jpeg Graphic file (type jpg)
+<use ./Screenshots/Status_of_Federated_Learning.jpeg>
+Package pdftex.def Info: ./Screenshots/Status_of_Federated_Learning.jpeg  used 
+on input line 53.
+(pdftex.def)             Requested size: 220.41959pt x 135.3031pt.
+<./Screenshots/Federated_Learning.png, id=4, 314.3745pt x 251.13824pt>
 File: ./Screenshots/Federated_Learning.png Graphic file (type png)
 <use ./Screenshots/Federated_Learning.png>
 Package pdftex.def Info: ./Screenshots/Federated_Learning.png  used on input li
-ne 56.
-(pdftex.def)             Requested size: 235.78029pt x 188.35323pt.
+ne 60.
+(pdftex.def)             Requested size: 220.06064pt x 175.79556pt.
  [1{C:/Users/Kiran S/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}
 
 
- <./Screenshots/Knowledge_Distillation.png>]
+ <./Screenshots/Knowledge_Distillation.png> <./Screenshots/Status_of_Federated_
+Learning.jpeg>]
+Underfull \hbox (badness 2717) in paragraph at lines 98--99
+[]\OT1/ptm/m/n/10 The pri-mary ob-jec-tive of this project is to ac-quire
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 98--99
+
+ []
+
+[2 <./Screenshots/Federated_Learning.png>]
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -346,24 +367,26 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[2 <./Screenshots/Federated_Learning.png>] (CSE598_Project_Proposal.aux)
+[3
+
+] (CSE598_Project_Proposal.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4173 strings out of 478338
- 65789 string characters out of 2850293
- 377968 words of memory out of 3000000
- 22589 multiletter control sequences out of 15000+600000
+ 4183 strings out of 478338
+ 66217 string characters out of 2850293
+ 378968 words of memory out of 3000000
+ 22597 multiletter control sequences out of 15000+600000
  496423 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,8n,62p,993b,259s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 55i,8n,62p,762b,259s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {D:/Tools/MikTex/fonts/enc/dvips/base/8r.enc}<D:/Tools/MikTex/fonts/type1/urw
 /times/utmr8a.pfb><D:/Tools/MikTex/fonts/type1/urw/times/utmri8a.pfb>
-Output written on CSE598_Project_Proposal.pdf (2 pages, 131484 bytes).
+Output written on CSE598_Project_Proposal.pdf (3 pages, 380549 bytes).
 PDF statistics:
- 24 PDF objects out of 1000 (max. 8388607)
+ 29 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

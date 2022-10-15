@@ -42,21 +42,30 @@ The rest of this proposal is arranged as follows: Section II will detail the fin
 
 \section{Literature Survey}
 \subsection{Knowledge Distillation Techniques for Federated Learning}
-One of the popular KD Algorithms for Heterogenous Federated Learning is proposed as FedMD (Li \& Wang) \cite{b4}. Here, the primary assumption is that our local nodes have the computation capability of defining and training their NN models specific to their local datasets - this helps solve the statistical heterogeneity of data across the nodes. FedMD focuses on utilizing the core idea of KD, i.e., using the Prediction Logits output from local Neural Network (NN) models averaged out as Knowledge to reach a better global consensus. FedMD also employs Knowledge Transfer (using a single giant global dataset) to overcome the issue of small local datasets. However, this paradigm is prone to Byzantine Faults and potential corruption of the global consensus due to adversarial attacks on one or more of the local nodes. Furthermore, the communication efficiency of the overall network architecture reduces as the number of nodes increases.
+One of the popular KD Algorithms for Heterogenous Federated Learning is proposed as FedMD (Li \& Wang) \cite{b4}. Here, the primary assumption is that our local nodes have the computation capability of defining and training their NN models specific to their local datasets - this helps solve the statistical heterogeneity of data across the nodes. Figure 2 clarifies the standing of FedMD with respect to other popular Federated Learning paradigms.
+
+FedMD focuses on utilizing the core idea of KD, i.e., using the Prediction Logits output from local Neural Network (NN) models averaged out as Knowledge to reach a better global consensus. FedMD also employs Knowledge Transfer (using a single giant global dataset) to overcome the issue of small local datasets. However, this paradigm is prone to Byzantine Faults and potential corruption of the global consensus due to adversarial attacks on one or more of the local nodes. Furthermore, the communication efficiency of the overall network architecture reduces as the number of nodes increases.
 
 Related work to Robust Federated Learning is done in \cite{b5}, where several Client (Teacher) models are fused into a single Server (Student) model, which is further trained using unlabeled datasets to improve robustness. However, this does not defend against potential adversaries (a similar drawback to the algorithm presented in FedMD).
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[scale=0.2]{Status_of_Federated_Learning.jpeg}
+\caption{Overview of Federated Learning Techniques}
+\label{fig}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[scale=0.7]{Federated_Learning.png}
+\caption{Heterogenous Federated Learning \cite{b4}. Here, the Translator is implemented using Knowledge Distillation in the FedMD Algorithm}
+\label{fig}
+\end{figure}
 
 \subsection{Improving Fairness and Robustness of Federated Learning Architectures}
 To improve Federated Learning architectures' fairness, accuracy, and robustness to potential Byzantine faults and adversarial attacks, we take inspiration from the algorithm proposed in Ditto (Tian Li et al) \cite{b6}. Here, personalization is used as a technique to balance robustness and fairness requirements. Personalization is mathematically conceptualized through regularization during local model updation with the global consensus calculated. The regularized parameter is tuned with respect to several factors, such as local dataset sample size, number of nodes affected by adversarial attacks, etc.
 
 This paper also introduces essential robustness and fairness metrics, a crucial step toward defining evaluation parameters for Federated Learning research in real-world scenarios.
-
-\begin{figure}[htbp]
-\centering
-\includegraphics[scale=0.75]{Federated_Learning.png}
-\caption{Heterogenous Federated Learning \cite{b4}. Here, the Translator is implemented using Knowledge Distillation in the FedMD Algorithm}
-\label{fig}
-\end{figure}
 
 \section{Problem Statement}
 Our problem statement is to increase the robustness of Knowledge Distillation techniques for Federated Learning. We intend to combine the idealogy presented in the FedMD algorithm with the Ditto Personalization Algorithm. We will define this combined implementation as a baseline for further investigating the effect of different Knowledge Distillation techniques, such as Ensemble, Cross-Modal \& Data-Free Distillation, to design robust, accurate \& communication-effective Federated Learning paradigms.   
@@ -64,21 +73,35 @@ Our problem statement is to increase the robustness of Knowledge Distillation te
 \subsection{Execution Plan}
 Our plan of action can be broken down into the following stages:
 \begin{enumerate}
-\item Gain a Complete Theoretical \& Practical Understanding of Knowledge Distillation - specific to the Multi-Teacher to Student Architecture. (12.5\%)
-\item Gain a Complete Theoretical \& Practical Understanding of general Federated Learning Paradigms such as FedAvg \cite{b7}. (12.5\%)
-\item Implement the FedMD Algorithm for applying Knowledge Distillation to Federated Learning settings. (25\%)
-\item Integrate the Ditto Algorithm step for Personalized Regularization to the created FedMD Algorithm. (20\%).
-\item Simulate Adversarial attacks on a randomized node selection to verify the overall robustness (test accuracy) \& fairness of the network. Code \& visualize the evaluation metrics. FedMD + Ditto will be defined as a baseline implementation for other experiments. (20\%)
-\item Integrate the Ditto Algorithm Personalization technique to any one of the other Knowledge Distillation techniques - Ensemble Distillation Algorithm, Cross-Modal, or Data-Free Distillation. (10\%)
+\item Gain a Complete Theoretical \& Practical Understanding of Knowledge Distillation - specific to the Multi-Teacher to Student Architecture.
+\item Gain a Complete Theoretical \& Practical Understanding of general Federated Learning Paradigms such as FedAvg \cite{b7}.
+\item Implement the FedMD Algorithm for applying Knowledge Distillation to Federated Learning settings.
+\item Integrate the Ditto Algorithm step for Personalized Regularization to the created FedMD Algorithm.
+\item Simulate Adversarial attacks on a randomized node selection to verify the overall robustness (test accuracy) \& fairness of the network. Code \& visualize the evaluation metrics. FedMD + Ditto will be defined as a baseline implementation for other experiments.
+\item Integrate the Ditto Algorithm Personalization technique to any one of the other Knowledge Distillation techniques - Ensemble Distillation Algorithm, Cross-Modal, or Data-Free Distillation.
 \end{enumerate}
 
 \subsection{Datasets}
-We strictly define our problem space to Image Classification tasks. Implementing the FedMD algorithm requires a general public dataset \& local private datasets. The public/local dataset combinations will be Fashion MNIST/FEMNIST \& CIFAR10/subsets of CIFAR100. 
+We strictly define our problem space to Image Classification tasks. Implementing the FedMD algorithm requires a general public dataset \& local private datasets. 
+
+In the first instance, a subset of the FEMNIST serves as the private data while the MNIST serves as the public data. We consider the non-.i.i.d. case and the i.i.d. scenario, where each private dataset is chosen randomly from FEMNIST. 
+
+In the second instance, the private dataset is a subset of the CIFAR100, which comprises 100 subclasses and 20 superclasses, and the public dataset is the CIFAR10. For example, the big carnivores category includes the bear, leopard, lion, tiger, and wolf. Each node's task in the i.i.d. scenario is to classify the test pictures correctly. It is more difficult to categorize generic test data in the non-i.i.d. scenario since each participant only has data from one subclass per superclass during training. For instance, it is predicted that a person who has only seen wolves throughout training will properly identify lions as huge carnivores. As a result, it must rely on the information shared by other nodes
 \subsection{Evaluation Metrics}
-We will use the same evaluation metrics in the Ditto paper \cite{b6}. The robustness of the overall algorithm can be measured in terms of test accuracy in adversarial settings. Fairness can be measured in terms of test accuracy variance across several simulations. The comparison of evaluation metrics to related works will be based on the results provided in the Ditto paper.
+We will primarily evaluate the Fairness \& Robustness of the complete network and compare it with the results produced using the original FedMD algorithm \& the original Ditto algorithm. The evaluation metrics used are based on the same used in the Ditto paper \cite{b6}, as explained below. 
+
+The algorithm's robustness directly corresponds to the test accuracy in various adversarial settings. We will evaluate robustness for different percentages of adversarially-affected (malicious) nodes. 
+
+The algorithm's fairness corresponds to the variance of test accuracy for multiple iterations of simulations under the same setting. The minimization of variance corresponds to improved Fairness of the algorithm.
 
 \section{Objectives \& Learning Outcomes}
-
+The primary objective of this project is to acquire foundational knowledge on Federated Learning, which is a massive breakthrough in deploying large-scale machine learning models in the real world while still preserving user data privacy. \\
+\newpage
+With our work in this project, we wish to establish a baseline for robust \& fair distillation techniques for improved personalization for heterogeneous devices and resilience to common adversarial attacks that can affect the whole system. Further developments can include: 
+\begin{enumerate}
+\item Extending robustness \& fairness to different distillation techniques for Federated Learning.
+\item Further improving Privacy settings of local datasets using Differential Privacy.
+\end{enumerate}
 
 \begin{thebibliography}{00}
 \bibitem{b1} W. Y. B. Lim et al., "Federated Learning in Mobile Edge Networks: A Comprehensive Survey," in IEEE Communications Surveys \& Tutorials, vol. 22, no. 3, pp. 2031-2063, third quarter 2020.
