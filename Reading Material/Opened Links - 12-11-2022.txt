@@ -1,0 +1,13 @@
+Federated Learning - General:
+https://research.aimultiple.com/federated-learning/
+https://federated.withgoogle.com/
+https://www.usenix.org/conference/usenixsecurity20/presentation/fang
+https://leaf.cmu.edu/
+
+
+Knowledge Distillation:
+https://neptune.ai/blog/knowledge-distillation
+
+
+Ditto:
+https://github.com/litian96/ditto
