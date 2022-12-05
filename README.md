@@ -81,7 +81,7 @@ We provide a jupyter notebook that simulates the federated learning implementati
 ```
 jupyter notebook
 ```
-then open ```feddistillation.ipynb```, and directly run the notebook cell by cell to reproduce the results.
+then open ```feddistillation.ipynb``` (**novel approach**), and directly run the notebook cell by cell to reproduce the results.
 
 
 
