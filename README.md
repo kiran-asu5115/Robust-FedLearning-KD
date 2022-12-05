@@ -1,4 +1,4 @@
-# CSE598-ML-Privacy-Course-Project
+# CSE598- Machine Learning Security and Fairness Project
 
 <div id="top"></div>
 
